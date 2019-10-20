@@ -72,16 +72,77 @@ export default function Game() {
         <p>{"Click here if she should risk being spotted."}</p>
         <p>{"Click here if she should run late and go to another hotel."}</p>
 
-{/*TITLE 7 -- PASSED TITLE 6 */}
+{/*TITLE 7a -- PASSED TITLE 6 */}
+        <h3>{"She was thankfully not been spotted, she's making her way to the presidential suite 10 floors upstairs should she ditch everyone and go by herself so she doesn't draw attention or take the risk and go with her team?"}</h3>
+        <p>{"Click here if she should go alone to the presidential suite."}</p>
+        <p>{"Click here if she should go with her team to the presidential suite."}</p>
+
+{/*TITLE 7b -- PASSED TITLE 6 */}
+        <h3>{"The west family offer her to join them in their suite and Motel 6 is able to provide a whole floor. Which do you suggest?"}</h3>
+        <p>{"Click here"}</p>
+        <p>{"Click here"}</p>
+
+{/*FAILED TITLE 7a*/}
+        <h3>{"Beyonce was kidnapped so Beyonce's other assistant fires you."}</h3>  
+
+{/*FAILED TITLE 7a*/}
+        <h3>{"She's been spotted and you ruin a whole era so she fires you."}</h3>  
+
+{/*FAILED TITLE 7b*/}
+        <h3>{"Beyonce says nothing. Julius has fired you."}</h3>  
+
+{/*TITLE 8 -- PASSED TITLE 7b */}
+        <h3>{"Beyonce says 'you know me so well'"}</h3>
+        <h3>{"Beyonce asks you to tell her lawyers who needs a cease and desist who you telling them about?Beycapital or Bey_Legion?"}</h3>
+        <p>{"Click here if you chose BeyCapital"}</p>
+        <p>{"Click here if you chose Bey_Legion"}</p>
+
+{/*TITLE 8a -- PASSED TITLE 7 */}
+        <h3>{"Her lawyers look into it and see how much money they've been profiting and she gives it to you as a bonus."}</h3>
+        <h3>{"Anyways congrats if you've made it this far for the first portion. You're minutes away from the hotel what changes do you need to have made before Beyonce arrives. Red toilet paper, newly painted walls, titanium drinking straws, or 100% cotton uniforms for the staff."}</h3>
+        <p>{"Click here if you chose titanium drinking straws."}</p>
+        <p>{"Click here if you chose freshly painted walls."}</p>
+        <p>{"Click here if you chose red toilet paper."}</p>
+        <p>{"Click here if you chose 100% cotton uniforms."}</p>
+
+{/*TITLE 8b -- PASSED TITLE 7 */}
+        <h3>{"Her secret twitter home is filled with tweets saying 'Fuck Beyonce' she thanks you and laughs."}</h3>
+        <h3>{"Beyonce asks if you know any other ways to piss off the beyhive what do you suggest? What do you suggest no FWT or more ugly merch?"}</h3>
+        <p>{"Click here if you chose more ugly merch."}</p>
+        <p>{"Click here if you chose no FWT."}</p>
+
+{/*FAILED TITLE 8b*/}
+        <h3>{"You've offended her, she fires you."}</h3>  
+
+{/*PASSED TITLE 8b...back to 8a */}
+        <h3>{"Beyonce jots that down in her notes and sends an email to her parkwood team."}</h3>
+        <h3>{"You're minutes away from the hotel what changes do you need to have made before Beyonce arrives. Red toilet paper, newly painted walls, titanium drinking straws, or 100% cotton uniforms for the staff."}</h3>
+        <p>{"Click here if you chose titanium drinking straws."}</p>
+        <p>{"Click here if you chose freshly painted walls."}</p>
+        <p>{"Click here if you chose red toilet paper."}</p>
+        <p>{"Click here if you chose 100% cotton uniforms."}</p>
+
+{/*TITLE 8a -- PASSED TITLE 9 */}
+        <h3>{"Beyonce takes back the bonus for you spending $800 on straws."}</h3>
+        <h3>{"Beyonce's laptop went missing! What are you doing? Looking for it yourself or letting the hotel beware it's missing?"}</h3>
+        <p>{"Click here"}</p>
+        <p>{"Click here"}</p>
+
+{/*FAILED TITLE 8a*/}
+        <h3>{"Beyonce has passed out from breathing in the fresh pain. You're fired."}</h3>  
+  
+
         <h3>{""}</h3>
         <p>{"Click here"}</p>
         <p>{"Click here"}</p>
 
-{/*TITLE 7 -- PASSED TITLE 6 */}
         <h3>{""}</h3>
         <p>{"Click here"}</p>
         <p>{"Click here"}</p>
 
+        <h3>{""}</h3>
+        <p>{"Click here"}</p>
+        <p>{"Click here"}</p>
 
         <h3>{""}</h3>
         <p>{"Click here"}</p>
