@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
+import {NEXT_QUESTION} from '../actions';
 
 export const initialState = {
+    currentScript: "",
+    currentIndex: 1,
  1: {
      script: "It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast.",
      outcome: null,
      choices: {
-        ch1: ["Click here if you chose the yogurt, granola and strawberries", 1],
-        ch2: ["Click here if you chose the 5 star breakfast", 2]
+        ch1: ["Click here if you chose the yogurt, granola and strawberries", 2],
+        ch2: ["Click here if you chose the 5 star breakfast", 1]
      },
      pass: null
  }, 
@@ -55,10 +58,18 @@ export const initialState = {
      },
     pass: null
 }
-}
+};
 
-export const reducer = (state = initialState, actions) => {
-        switch (actions.type) {
+export const reducer = (state = initialState, action) => {
+        switch (action.type) {
+            case NEXT_QUESTION: 
+            console.log("Made it to reducer!");
+                return {
+                    ...state,
+                    currentScript: state[state.currentIndex],
+                    currentIndex: state.currentIndex + 1
+                };
+            
         default: 
             return state;
     }
