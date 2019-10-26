@@ -60,6 +60,8 @@ export const initialState = {
 }
 };
 
+//for some reason I can't get my action to call my reducer...must be something wrong with the Redux mapping
+
 export const reducer = (state = initialState, action) => {
         switch (action.type) {
             case NEXT_QUESTION: 

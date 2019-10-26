@@ -1,10 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Choice from './Choice';
-import {NEXT_QUESTION} from "./actions";
+import {nextQuestion} from './actions';
 
 const GameCard = props => {
 
+let clickHandler = item => {
+    // setIndex(index + 1);
+    // setClicked(!clicked);
+    nextQuestion(item);
+  }
 
 
     return(
@@ -28,6 +33,11 @@ const GameCard = props => {
                 <div className="choice-item">
                      <Choice /> <p>{"Click here if you choose Jay."}</p>
                 </div>
+
+
+                <button onClick={() => clickHandler({
+                    here: "Here I am!"
+                })}>Click Me</button>
                 
             </div>
 
@@ -44,4 +54,4 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-     {NEXT_QUESTION})(GameCard); 
+     {nextQuestion})(GameCard); 

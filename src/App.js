@@ -7,8 +7,9 @@ import Game from './components/Game';
 import GameCard from './GameCard';
 import Choice from './Choice';
 import {nextQuestion} from './actions';
+import { connect } from 'react-redux';
 
-function App() {
+const App = props => {
   const [index, setIndex] = useState(0);
   const [clicked, setClicked] = useState(false);
 
@@ -27,14 +28,26 @@ function App() {
           <img src={pic1} className="game-img"></img>
           <img src={pic2} className="game-img"></img>
           <img src={pic3} className="game-img"></img>
+
+          <h2>{props.script}</h2>
         </div>
 
-        <button onClick={clickHandler}>Click Me</button>
+        <button onClick={() => clickHandler({
+                    here: "Here I am!"
+                })}>Click Me</button>
 
-        <GameCard />
+        <GameCard nextQuestion={nextQuestion}/>
       </header>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+      script: state.currentScript
+  }
+}
+
+export default connect(
+  mapStateToProps,
+   {nextQuestion})(App); 
