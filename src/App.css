@@ -17,6 +17,17 @@
   color: white;
 }
 
+.navbar {
+  display: flex;
+  /* flex-direction:  */
+  justify-content: flex-end;
+}
+.navbar a {
+  text-decoration: none;
+  margin: 10px;
+  
+}
+
 .App-link {
   color: #09d3ac;
 }
@@ -34,12 +45,17 @@
   background: coral;
   width: 40px;
   height: 40px;
-  margin: 20px 0;
+  margin: 20px 20px;
 }
 
 
 .game-question-card {
-  border: 2px solid red;
+  width: 80%;
+}
+
+.question-card-header h4 {
+  width: 80%;
+  margin: 10px auto;
 }
 
 .game-choice-menu {
@@ -51,6 +67,6 @@
 
 .choice-item {
   display: flex;
-  justify-content: center;
-  margin: 0 10px;
+  justify-content: space-evenly;
+  /* margin: 0 10px; */
 }

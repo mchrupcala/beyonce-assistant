@@ -65,10 +65,12 @@ export const initialState = {
 export const reducer = (state = initialState, action) => {
         switch (action.type) {
             case NEXT_QUESTION: 
-            console.log("Made it to reducer!");
+            console.log("Made it to reducer!")
                 return {
                     ...state,
-                    currentScript: state[state.currentIndex],
+                    currentScript: "Poopeeepeepaw"
+                    // state[state.currentIndex]
+                    ,
                     currentIndex: state.currentIndex + 1
                 };
             
