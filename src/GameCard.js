@@ -19,7 +19,7 @@ let clickHandler = item => {
 
 {/* //will become a Redux item or prop....=currentIndex.script */}
             <h4>{"It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast."}</h4>
-            <h2>{props.script}</h2>
+            {/* <h2>{props.script}</h2> */}
             </div>
 
             <div className="game-choice-menu">
@@ -36,7 +36,7 @@ let clickHandler = item => {
 
 
                 <button onClick={() => clickHandler({
-                    here: "Here I am!"
+                    currentScript: "Here I am!"
                 })}>Click Me</button>
                 
             </div>
