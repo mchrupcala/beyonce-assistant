@@ -2,8 +2,8 @@
 import {NEXT_QUESTION} from '../actions/index';
 
 export const initialState = {
-    currentScript: "Here's the blahscript.",
-    currentIndex: 1,
+    currentScript: "It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast.",
+    currentIndex: 0,
     game: [
         {
             script: "It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast.",
@@ -18,8 +18,8 @@ export const initialState = {
            script: "She yells at you 'Are you trying to make me fat like you?!' then has her team of lawyers send you a termination letter.",
            outcome: null,
            choices: {
-               ch1: ["", 1],
-               ch2: ["", 2]
+               ch1: ["OK", 1],
+               ch2: ["OK", 2]
             },
            pass: null
        }, 
@@ -73,7 +73,8 @@ export const reducer = (state = initialState, action) => {
             return {
                     ...state,
                     
-                    currentScript: action.payload.script
+                    currentScript: state.game[state.currentIndex].script,
+                    currentIndex: state.currentIndex + 1
                     // currentIndex: 2,
                     // one: 
                     // state[state.currentIndex]

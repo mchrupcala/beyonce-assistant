@@ -31,7 +31,7 @@ const App = props => {
           {/* <img src={pic2} className="game-img"></img> */}
           {/* <img src={pic3} className="game-img"></img> */}
 
-          <h2>{props.blahscript}</h2>
+          {/* <h2>{props.blahscript}</h2> */}
         </div>
 
         <button onClick={() => clickHandler({
