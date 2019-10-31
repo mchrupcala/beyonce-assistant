@@ -18,8 +18,7 @@ export const initialState = {
            script: "She yells at you 'Are you trying to make me fat like you?!' then has her team of lawyers send you a termination letter.",
            outcome: null,
            choices: {
-               ch1: ["OK", 1],
-               ch2: ["OK", 2]
+   
             },
            pass: null
        }, 
@@ -36,8 +35,7 @@ export const initialState = {
            script: "She says 'She's only 2...' then has her team of lawyers send you a termination letter.",
            outcome: null,
            choices: {
-               ch1: ["", 1],
-               ch2: ["", 2]
+
             },
            pass: null
        },
@@ -74,7 +72,7 @@ export const reducer = (state = initialState, action) => {
                     ...state,
                     
                     currentScript: state.game[state.currentIndex].script,
-                    currentIndex: state.currentIndex + 1
+                    currentIndex: state.currentIndex + action.payload.clickedOption
                     // currentIndex: 2,
                     // one: 
                     // state[state.currentIndex]

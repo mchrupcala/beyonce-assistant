@@ -1,24 +1,33 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Choice from './Choice';
+// import Choice from './Choice';
 import {nextQuestion} from './actions';
 
 const GameCard = props => {
 
 let clickHandler = item => {
-    console.log(props.choices);
     props.nextQuestion(item);
-    console.log(choiceLoop);
+    // console.log(choiceLoop);
   }
+
+
+  
   let choiceLen = Object.keys(props.choices).length;
+  let incVals = Object.values(props.choices).map(item => item[1]);
+
+  // Why do I need this stuff, and the second function call of newLen() on line 60? Might be useless but keep it around to find out.
   let choiceLoop = []
 
-  function NewLen() {
+//   function NewLen() {
 
-    for (let i = 0; i < choiceLen; i++) {
-        choiceLoop.push(<div><Choice /> <p>{props.choices[i]}</p></div>);
-    }
-}
+//     for (let i = 0; i < choiceLen; i++) {
+//         if (props.choices[i] != null) {
+//             choiceLoop.push(<div><Choice /> <p>{props.choices[i]}{incVals}</p></div>);
+//         } else {
+//             break;
+//         }
+//     }
+// }
 
     return(
         <div className="game-question-card">
@@ -37,7 +46,12 @@ let clickHandler = item => {
                     {choiceLen ? (
                         <ul>
                             {Object.values(props.choices).map(item => (
-                               <div className="choice-item"> <Choice /> <p>{item}</p>  </div>
+                               <div className="choice-item"> <button className="button" onClick={() => {
+                                clickHandler({
+                                    clickedOption: item[1]
+                                }) }}
+                                //    props.game[state.currentIndex].choices[i][2]
+                            /> <p>{item[0]}</p>  </div>
                             ))}
                         </ul>
                     ) 
@@ -46,8 +60,9 @@ let clickHandler = item => {
 
                 <button onClick={() => {
                 clickHandler({
-                    // currentScript: "Here I am!"
-                }); NewLen();
+                    
+                })
+                // ; NewLen();
                 }}>Click Me</button>
                 
             </div>
@@ -61,7 +76,7 @@ const mapStateToProps = state => {
     return {
         script: state.game[state.currentIndex].script,
         currentIndex: state.currentIndex,
-        choices: state.game[state.currentIndex].choices
+        choices: state.game[state.currentIndex].choices,
     }
 }
 
