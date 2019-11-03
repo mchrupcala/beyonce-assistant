@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+@font-face {
+  font-family: 'Steelfish';
+  src: local('Steelfish'), url(./fonts/steelfish/steelfish\_rg.ttf) format('ttf');
+}
+
 .App-logo {
   height: 40vmin;
 }
@@ -69,4 +74,18 @@
   display: flex;
   justify-content: space-evenly;
   /* margin: 0 10px; */
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: #f4c0d7;
+  font-family: Steelfish;
+}
+
+button {
+  background: white;
+  width: 120px;
+  border: #f4c0d7;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 10px;
 }

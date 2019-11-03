@@ -38,16 +38,17 @@ let restartHandler = item => {
     return(
         <div className="game-question-card">
             <div className="question-card-header">
+                
+            <h2>Your score: {props.score}</h2>
+
             {/* Image/GIF will go here */}
 
-{/* //will become a Redux item or prop....=currentIndex.script */}
-            {/* <h4>{"It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast."}</h4> */}
-            <h2>{props.script}</h2>
-            <h2>Your score: {props.score}</h2>
+
+            <h3>{props.script}</h3>
+            
             </div>
 
             <div className="game-choice-menu">
-                {/* Each of these should be a Redux option. Will be rendered using a For Loop...for i in choices */}
 
                 <div>
                     {choiceLen ? (
@@ -78,7 +79,7 @@ let restartHandler = item => {
                     })
                 } }>Restart Game</button>
 
-                
+                {/* Check the current indexes state */}
                  {/* <button onClick={console.log(props.currentIndex, props.lastIndex)}>Check state</button> */}
                 
             </div>

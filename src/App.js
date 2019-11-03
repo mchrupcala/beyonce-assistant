@@ -25,18 +25,17 @@ const App = props => {
     <div className="App">
       <Nav />
       <header className="App-header">
-
-        <div className = { clicked ? "active-img" : ""}>
+<h1>Beyonce's Assistant</h1>
+        {/* <div className = { clicked ? "active-img" : ""}>
           <img src={pic1} className="game-img" alt="Here's some text."></img>
-          {/* <img src={pic2} className="game-img"></img> */}
-          {/* <img src={pic3} className="game-img"></img> */}
+          <img src={pic2} className="game-img"></img>
+          <img src={pic3} className="game-img"></img>
 
-          {/* <h2>{props.blahscript}</h2> */}
         </div>
 
         <button onClick={() => clickHandler({
                     script: "Here I am!"
-                })}>Click Me</button>
+                })}>Click Me</button> */}
 
         <GameCard nextQuestion={props.nextQuestion} script={props.blahscript}/>
       </header>
