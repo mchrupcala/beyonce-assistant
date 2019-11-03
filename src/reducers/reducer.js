@@ -1,9 +1,11 @@
 // import React, {useState} from 'react';
-import {NEXT_QUESTION} from '../actions/index';
+import {NEXT_QUESTION, LAST_QUESTION} from '../actions/index';
+
 
 export const initialState = {
     currentScript: "It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast.",
     currentIndex: 0,
+    lastIndex: [],
     game: [
         {
             script: "It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast.",
@@ -388,114 +390,6 @@ export const initialState = {
             ch2: ["", 2]
          },
         pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
-    },
-    {
-        script: "",
-        outcome: null,
-        choices: {
-            ch1: ["", 1],
-            ch2: ["", 2]
-         },
-        pass: null
     }
     ]
  
@@ -507,19 +401,31 @@ export const reducer = (state = initialState, action) => {
         switch (action.type) {
 
         case NEXT_QUESTION: 
-                console.log("Made it to reducer!", action.payload.script);
+            console.log("Made it to reducer!", action.payload.script);
+        return {
+                ...state,
+                
+                currentScript: state.game[state.currentIndex].script,
+                
+                lastIndex: state.lastIndex.concat((state.currentIndex)),
+                
+                currentIndex: state.currentIndex + action.payload.clickedOption
+                
+                // currentIndex: 2,
+                // one: 
+                // state[state.currentIndex]
+                
+                // currentIndex: state.currentIndex + 1
+                
+            };
+
+        case LAST_QUESTION:
+            console.log("reducer: ", state.lastIndex, state.currentScript);
             return {
-                    ...state,
-                    
-                    currentScript: state.game[state.currentIndex].script,
-                    currentIndex: state.currentIndex + action.payload.clickedOption
-                    // currentIndex: 2,
-                    // one: 
-                    // state[state.currentIndex]
-                    
-                    // currentIndex: state.currentIndex + 1
-                    
-                };
+                ...state,
+                currentIndex: state.lastIndex.pop(),
+                currentScript: state.game[state.currentIndex].script
+            }
             
         default: 
             return state;

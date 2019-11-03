@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import Choice from './Choice';
-import {nextQuestion} from './actions';
+import {nextQuestion, lastQuestion} from './actions';
 
 const GameCard = props => {
 
@@ -9,6 +8,10 @@ let clickHandler = item => {
     props.nextQuestion(item);
     // console.log(choiceLoop);
   }
+
+let backHandler = item => {
+    props.lastQuestion(item);
+}
 
 
   
@@ -59,11 +62,12 @@ let clickHandler = item => {
                 </div>
 
                 <button onClick={() => {
-                clickHandler({
-                    
+                backHandler({
+                    here: "Here!"
                 })
                 // ; NewLen();
-                }}>Click Me</button>
+                }}>Back</button>
+                <button onClick={console.log(props.currentIndex, props.lastIndex)}>Check state</button>
                 
             </div>
 
@@ -77,9 +81,10 @@ const mapStateToProps = state => {
         script: state.game[state.currentIndex].script,
         currentIndex: state.currentIndex,
         choices: state.game[state.currentIndex].choices,
+        lastIndex: state.lastIndex
     }
 }
 
 export default connect(
     mapStateToProps,
-     {nextQuestion})(GameCard); 
+     {nextQuestion, lastQuestion})(GameCard); 
