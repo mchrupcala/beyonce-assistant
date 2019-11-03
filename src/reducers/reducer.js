@@ -1,11 +1,12 @@
 // import React, {useState} from 'react';
-import {NEXT_QUESTION, LAST_QUESTION} from '../actions/index';
+import {NEXT_QUESTION, LAST_QUESTION, RESTART} from '../actions/index';
 
 
 export const initialState = {
     currentScript: "It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast.",
     currentIndex: 0,
     lastIndex: [],
+    score: 0,
     game: [
         {
             script: "It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast.",
@@ -18,7 +19,7 @@ export const initialState = {
         }, 
         {
            script: "She yells at you 'Are you trying to make me fat like you?!' then has her team of lawyers send you a termination letter.",
-           outcome: null,
+           outcome: "failed",
            choices: {
    
             },
@@ -35,7 +36,7 @@ export const initialState = {
        },
        {
            script: "She says 'She's only 2...' then has her team of lawyers send you a termination letter.",
-           outcome: null,
+           outcome: "failed",
            choices: {
 
             },
@@ -53,7 +54,7 @@ export const initialState = {
        },
        {
            script: "She tells you 'I'm not going to get drunk before an event and gossip with some peasant' then calls a new assistant.",
-           outcome: null,
+           outcome: "failed",
            choices: {
 
             },
@@ -79,7 +80,7 @@ export const initialState = {
        },
        {
            script: "The application for the makeup and body makeup is ruined from the chlorine. You've been FIRED.",
-           outcome: null,
+           outcome: "failed",
            choices: {
 
             },
@@ -87,7 +88,7 @@ export const initialState = {
        },
        {
            script: "Beyonce's hair is WET causing even more time making her late to the event. You've been fired.",
-           outcome: null,
+           outcome: "failed",
            choices: {
 
             },
@@ -95,7 +96,7 @@ export const initialState = {
        },
        {
            script: "She starts crying then fires you after the 3:03 minutes.",
-           outcome: null,
+           outcome: "failed",
            choices: {
 
             },
@@ -112,7 +113,7 @@ export const initialState = {
        },
        {
            script: "She got car sick and threw up all over her outfit. You've been kicked out the car and fired.",
-           outcome: null,
+           outcome: "failed",
            choices: {
 
             },
@@ -147,7 +148,7 @@ export const initialState = {
        },
        {
            script: "Beyonce was kidnapped so Beyonce's other assistant fires you.",
-           outcome: null,
+           outcome: "failed",
            choices: {
 
             },
@@ -155,7 +156,7 @@ export const initialState = {
        },
        {
            script: "She's been spotted and you ruin a whole era so she fires you.",
-           outcome: null,
+           outcome: "failed",
            choices: {
 
             },
@@ -163,7 +164,7 @@ export const initialState = {
        },
        {
            script: "Beyonce says nothing. Julius has fired you.",
-           outcome: null,
+           outcome: "failed",
            choices: {
 
             },
@@ -401,7 +402,6 @@ export const reducer = (state = initialState, action) => {
         switch (action.type) {
 
         case NEXT_QUESTION: 
-            console.log("Made it to reducer!", action.payload.script);
         return {
                 ...state,
                 
@@ -409,22 +409,24 @@ export const reducer = (state = initialState, action) => {
                 
                 lastIndex: state.lastIndex.concat((state.currentIndex)),
                 
-                currentIndex: state.currentIndex + action.payload.clickedOption
+                currentIndex: state.currentIndex + action.payload.clickedOption,
                 
-                // currentIndex: 2,
-                // one: 
-                // state[state.currentIndex]
-                
-                // currentIndex: state.currentIndex + 1
+                score: (state.game[state.currentIndex + action.payload.clickedOption].outcome === "failed" ? 0 : state.score + 100) 
                 
             };
 
         case LAST_QUESTION:
-            console.log("reducer: ", state.lastIndex, state.currentScript);
             return {
                 ...state,
                 currentIndex: state.lastIndex.pop(),
                 currentScript: state.game[state.currentIndex].script
+            };
+
+        case RESTART:
+            return {
+                ...state,
+                currentIndex: 0,
+                lastIndex: []
             }
             
         default: 

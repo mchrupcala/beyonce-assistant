@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {nextQuestion, lastQuestion} from './actions';
+import {nextQuestion, lastQuestion, restart} from './actions';
 
 const GameCard = props => {
 
@@ -13,6 +13,9 @@ let backHandler = item => {
     props.lastQuestion(item);
 }
 
+let restartHandler = item => {
+    props.restart(item);
+}
 
   
   let choiceLen = Object.keys(props.choices).length;
@@ -40,6 +43,7 @@ let backHandler = item => {
 {/* //will become a Redux item or prop....=currentIndex.script */}
             {/* <h4>{"It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast."}</h4> */}
             <h2>{props.script}</h2>
+            <h2>Your score: {props.score}</h2>
             </div>
 
             <div className="game-choice-menu">
@@ -67,7 +71,15 @@ let backHandler = item => {
                 })
                 // ; NewLen();
                 }}>Back</button>
-                <button onClick={console.log(props.currentIndex, props.lastIndex)}>Check state</button>
+
+                <button onClick={() => {
+                    restartHandler({
+                        val: "here!"
+                    })
+                } }>Restart Game</button>
+
+                
+                 {/* <button onClick={console.log(props.currentIndex, props.lastIndex)}>Check state</button> */}
                 
             </div>
 
@@ -81,10 +93,11 @@ const mapStateToProps = state => {
         script: state.game[state.currentIndex].script,
         currentIndex: state.currentIndex,
         choices: state.game[state.currentIndex].choices,
-        lastIndex: state.lastIndex
+        lastIndex: state.lastIndex,
+        score: state.score
     }
 }
 
 export default connect(
     mapStateToProps,
-     {nextQuestion, lastQuestion})(GameCard); 
+     {nextQuestion, lastQuestion, restart})(GameCard); 
