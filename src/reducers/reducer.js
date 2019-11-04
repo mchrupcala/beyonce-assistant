@@ -1,4 +1,6 @@
 // import React, {useState} from 'react';
+import media0 from '../images/0.jpg';
+import media1 from '../video/0.mp4';
 import {NEXT_QUESTION, LAST_QUESTION, RESTART} from '../actions/index';
 
 
@@ -11,6 +13,10 @@ export const initialState = {
         {
             script: "It's your first day on the job and Beyonce is getting ready for a red carpet. What are you getting her for breakfast? Yogurt, granola and strawberries or a 5 star breakfast.",
             outcome: null,
+            media: {
+                type: "img",
+                url: media0
+            },
             choices: {
                ch1: ["Click here if you chose the yogurt, granola and strawberries", 2],
                ch2: ["Click here if you chose the 5 star breakfast", 1]
@@ -20,6 +26,10 @@ export const initialState = {
         {
            script: "She yells at you 'Are you trying to make me fat like you?!' then has her team of lawyers send you a termination letter.",
            outcome: "failed",
+           media: {
+            type: "vid",
+            url: media1
+        },
            choices: {
    
             },

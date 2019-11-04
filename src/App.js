@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
-import pic1 from "./images/download-1.jpg";
-// import pic2 from "./images/download.jpg";
-// import pic3 from "./images/images.jpg";
+// import pic1 from "./images/download-1.jpg";
 import './App.css';
 // import Game from './components/Game';
 import GameCard from './GameCard';
