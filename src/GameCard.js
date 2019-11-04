@@ -38,7 +38,7 @@ let restartHandler = item => {
     return(
         <div className="game-question-card">
             <div className="question-card-header">
-                
+
             <h2>Your score: {props.score}</h2>
 
             {/* Image/GIF will go here */}
@@ -50,7 +50,7 @@ let restartHandler = item => {
 
             <div className="game-choice-menu">
 
-                <div>
+                <div className="game-choices">
                     {choiceLen ? (
                         <ul>
                             {Object.values(props.choices).map(item => (
@@ -66,6 +66,7 @@ let restartHandler = item => {
                     : (<p>All done!</p>)}
                 </div>
 
+                <div className="button-div">
                 <button onClick={() => {
                 backHandler({
                     here: "Here!"
@@ -78,6 +79,7 @@ let restartHandler = item => {
                         val: "here!"
                     })
                 } }>Restart Game</button>
+                </div>
 
                 {/* Check the current indexes state */}
                  {/* <button onClick={console.log(props.currentIndex, props.lastIndex)}>Check state</button> */}

@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Steelfish';
-  src: local('Steelfish'), url(./fonts/steelfish/steelfish\_rg.ttf) format('ttf');
+  src: local('Steelfish'), url(./fonts/steelfish/steelfish_rg.ttf) format('ttf');
 }
 
 .App-logo {
@@ -46,11 +46,16 @@
 }
 
 .button {
-  border-radius: 20px;
-  background: coral;
+  border-radius: 100px;
+  background: #f4c0d7;
   width: 40px;
   height: 40px;
-  margin: 20px 20px;
+  margin: auto 10px;
+  /* margin: 20px 20px; */
+}
+
+.choice-item p {
+  width: 75%;
 }
 
 
@@ -70,9 +75,15 @@
   width: 50%;
 }
 
+.game-choices ul {
+  margin: auto 0;
+  padding: 0;
+}
+
 .choice-item {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin: 10px 0;
   /* margin: 0 10px; */
 }
 
@@ -83,9 +94,19 @@ p, h1, h2, h3, h4, h5, h6 {
 
 button {
   background: white;
-  width: 120px;
+  width: 150px;
   border: #f4c0d7;
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 10px;
+}
+
+
+.button-div {
+  display: flex;
+  margin: 0 auto;
+}
+
+.button-div button {
+  margin: 0 15px;
 }

@@ -129,6 +129,7 @@ export const initialState = {
            pass: null
        },
        {
+        // 14
            script: "She was thankfully not been spotted, she's making her way to the presidential suite 10 floors upstairs should she ditch everyone and go by herself so she doesn't draw attention or take the risk and go with her team?",
            outcome: null,
            choices: {
@@ -171,6 +172,7 @@ export const initialState = {
            pass: null
        },
        {
+           //19
            script: "Beyonce says 'You know me so well.' Beyonce asks you to tell her lawyers who needs a cease and desist who you telling them about? Beycapital or Bey_Legion?",
            outcome: null,
            choices: {
@@ -197,10 +199,11 @@ export const initialState = {
            pass: null
        },
        {
+           //22
            script: "Beyonce jots that down in her notes and sends an email to her parkwood team. Anyways congrats if you've made it this far for the first portion. You're minutes away from the hotel what changes do you need to have made before Beyonce arrives. Red toilet paper, newly painted walls, titanium drinking straws, or 100% cotton uniforms for the staff.",
            outcome: null,
            choices: {
-               ch1: ["Click here if you chose titanium drinking straws.", 1],
+               ch1: ["Click here if you chose titanium drinking straws.", 10],
                ch2: ["Click here if you chose freshly painted walls.", 2],
                ch3: ["Click here if you chose red toilet paper.", 3],
                ch4: ["Click here if you chose 100% cotton uniforms.", 9]
@@ -213,7 +216,7 @@ export const initialState = {
            choices: {
             ch1: ["Click here if you chose titanium drinking straws.", 9],
             ch2: ["Click here if you chose freshly painted walls.", 1],
-            ch3: ["Click here if you chose red toilet paper.", 3],
+            ch3: ["Click here if you chose red toilet paper.", 2],
             ch4: ["Click here if you chose 100% cotton uniforms.", 8]
             },
            pass: null
@@ -227,6 +230,7 @@ export const initialState = {
            pass: null
        },
        {
+           //25
            script: "She hasn't went to the bathroom yet so she hasn't noticed the red toilet paper. Beyonce says she's a little hungry. What are you getting her fruit, deli tray, juicy baked chicken, or desert?",
            outcome: null,
            choices: {
@@ -254,6 +258,7 @@ export const initialState = {
         pass: null
     },
     {
+        //28
         script: "Beyonce depressingly eats the fruit. Beyonce asks if you made sure the event organizer had her seated away from a certain someone. Who is she referring to? Tiffany Haddish or Nicki Minaj?",
         outcome: null,
         choices: {
@@ -299,7 +304,8 @@ export const initialState = {
          },
         pass: null
     },
-    {
+    { 
+        //33
         script: "You've let the hotel beware and one of the motel 6 employees stole it and leaked Byeonce's work and private information. You're fired.",
         outcome: null,
         choices: {
@@ -333,7 +339,8 @@ export const initialState = {
          },
         pass: null
     },
-    {
+    { 
+        //37
         script: "Beyonce says 'Do you even know me?' then fires you.",
         outcome: null,
         choices: {
@@ -342,6 +349,7 @@ export const initialState = {
         pass: null
     },
     {
+        //38
         script: "Someone has found it but are blackmailing you for money or they'll leak everything on it. What are you doing telling Beyonce or trying to negotiate with them?",
         outcome: null,
         choices: {
@@ -368,6 +376,7 @@ export const initialState = {
         pass: null
     },
     {
+        //41
         script: "Nicki Minaj texts her from the event that she's seated way in the back, and Beyonce fires you.",
         outcome: null,
         choices: {
@@ -376,6 +385,7 @@ export const initialState = {
         pass: null
     },    
     {
+        //winner
         script: "It's time for the event!",
         outcome: "You Win!",
         choices: {
