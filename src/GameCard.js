@@ -38,41 +38,28 @@ let restartHandler = item => {
     return(
         <div className="game-question-card">
             <div className="question-card-header">
-
-            <div>{props.media}</div>
-            <h2>Your score: {props.score}</h2>
-
-            {/* Image/GIF will go here */}
-
-
-            <h3>{props.script}</h3>
-
-            <div>
-                {props.mediaType === "img" ? (<></>)
-
+                <h3>{props.script}</h3>
+            <div className="media-container">
+                {props.mediaType === "img" ? (<img src={props.media}></img>)
                  : (
-                    <video autoPlay loop muted playsinline>
+                    <video autoPlay loop muted playsInline key={props.media}>
                     <source src={props.media} type="video/mp4"></source>
                 </video>
-                  ) }
-                
+                  )}
             </div>
-            
-            
             </div>
 
             <div className="game-choice-menu">
-
                 <div className="game-choices">
                     {choiceLen ? (
                         <ul>
                             {Object.values(props.choices).map(item => (
-                               <div className="choice-item"> <button className="button" onClick={() => {
+                               <div className="choice-item" onClick={() => {
                                 clickHandler({
                                     clickedOption: item[1]
-                                }) }}
+                                }) }}>  <p>{item[0]}</p>  </div>
                                 //    props.game[state.currentIndex].choices[i][2]
-                            /> <p>{item[0]}</p>  </div>
+                             
                             ))}
                         </ul>
                     ) 
@@ -110,7 +97,6 @@ const mapStateToProps = state => {
         currentIndex: state.currentIndex,
         choices: state.game[state.currentIndex].choices,
         lastIndex: state.lastIndex,
-        score: state.score,
         mediaType: state.game[state.currentIndex].media.type,
         media: state.game[state.currentIndex].media.url
     }

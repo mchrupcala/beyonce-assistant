@@ -2,35 +2,84 @@
   text-align: center;
 }
 
+/************* BASIC ELEMENT STYLING ****************/
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: #f4c0d7;
+  font-family: Steelfish;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+
+button {
+  background: white;
+  width: 150px;
+  border: #f4c0d7;
+  margin: 10px 0;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
 @font-face {
   font-family: 'Steelfish';
   src: local('Steelfish'), url(./fonts/steelfish/steelfish_rg.ttf) format('ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-}
+/*********************************************/
 
-.App-header {
+body {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.app-header {
+  margin-top: 10px;
+}
+
+.nav-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gamescore h2 {
+
+margin: 0;
+text-align: center;
 }
 
 .navbar {
   display: flex;
-  /* flex-direction:  */
   justify-content: flex-end;
+  margin: 0;
+  text-align: center;
 }
 .navbar a {
   text-decoration: none;
-  margin: 10px;
-  
+  margin: 0 10px; 
+}
+
+.gamescore {
+  /* background: red; */
 }
 
 .App-link {
@@ -48,19 +97,49 @@
 .button {
   border-radius: 100px;
   background: #f4c0d7;
-  width: 40px;
-  height: 40px;
+  width: 20%;
+  height: 20%;
   margin: auto 10px;
   /* margin: 20px 20px; */
 }
 
+/************* GAME SCREEN ****************/
+
+.media-container {
+}
+
+.media-container img {
+  max-width: 700px;
+  min-width: 300px;
+  width: 60%;
+}
+.media-container video {
+  max-width: 700px;
+  min-width: 300px;
+  width: 60%;
+}
+
+/************* GAME NAVIGATION ****************/
+
 .choice-item p {
-  width: 75%;
+  width: 90%;
+  color: white;
+  font-weight: bold;
+}
+
+.choice-item p:hover {
+  font-size: 21px;
+}
+
+.choice-item:hover {
+  cursor: pointer;
 }
 
 
 .game-question-card {
   width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5%;
 }
 
 .question-card-header h4 {
@@ -84,29 +163,20 @@
   display: flex;
   justify-content: center;
   margin: 10px 0;
-  /* margin: 0 10px; */
+  background: #f4c0d7;
+  border-radius: 20px;
 }
-
-p, h1, h2, h3, h4, h5, h6 {
-  color: #f4c0d7;
-  font-family: Steelfish;
-}
-
-button {
-  background: white;
-  width: 150px;
-  border: #f4c0d7;
-  margin: 10px 0;
-  font-size: 20px;
-  border-radius: 10px;
-}
-
 
 .button-div {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .button-div button {
   margin: 0 15px;
 }
+
+/*********************************************/

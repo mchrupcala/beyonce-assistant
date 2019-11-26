@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-// import pic1 from "./images/download-1.jpg";
 import './App.css';
 // import Game from './components/Game';
 import GameCard from './GameCard';
@@ -21,21 +20,10 @@ const App = props => {
 
   return (
     <div className="App">
-      <Nav />
+      <Nav score={props.score}/>
       <header className="App-header">
-<h1>Beyonce's Assistant</h1>
-        {/* <div className = { clicked ? "active-img" : ""}>
-          <img src={pic1} className="game-img" alt="Here's some text."></img>
-          <img src={pic2} className="game-img"></img>
-          <img src={pic3} className="game-img"></img>
-
-        </div>
-
-        <button onClick={() => clickHandler({
-                    script: "Here I am!"
-                })}>Click Me</button> */}
-
-        <GameCard nextQuestion={props.nextQuestion} script={props.blahscript}/>
+        <h1>Beyonce's Assistant</h1>
+        <GameCard nextQuestion={props.nextQuestion}/>
       </header>
     </div>
   );
@@ -44,8 +32,7 @@ const App = props => {
 const mapStateToProps = state => {
   return {
       blahscript: state.currentScript,
-      // one: state.one,
-      // two: state.two
+      score: state.score
   }
 }
 
