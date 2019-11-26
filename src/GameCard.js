@@ -38,7 +38,6 @@ let restartHandler = item => {
     return(
         <div className="game-question-card">
             <div className="question-card-header">
-                <h3>{props.script}</h3>
             <div className="media-container">
                 {props.mediaType === "img" ? (<img src={props.media}></img>)
                  : (
@@ -47,6 +46,7 @@ let restartHandler = item => {
                 </video>
                   )}
             </div>
+            <h3>{props.script}</h3>
             </div>
 
             <div className="game-choice-menu">
@@ -63,8 +63,10 @@ let restartHandler = item => {
                             ))}
                         </ul>
                     ) 
-                    : (<p>All done!</p>)}
+                    : (<p>Play again?</p>)}
                 </div>
+
+                <div className="border-div"></div>
 
                 <div className="button-div">
                 <button onClick={() => {
@@ -74,11 +76,11 @@ let restartHandler = item => {
                 // ; NewLen();
                 }}>Back</button>
 
-                <button onClick={() => {
+                <button className="restart" onClick={() => {
                     restartHandler({
                         val: "here!"
                     })
-                } }>Restart Game</button>
+                } }>Restart</button>
                 </div>
 
                 {/* Check the current indexes state */}
