@@ -113,12 +113,12 @@ text-align: center;
 .media-container img {
   max-width: 700px;
   min-width: 300px;
-  width: 60%;
+  width: 100%;
 }
 .media-container video {
   max-width: 700px;
   min-width: 300px;
-  width: 60%;
+  width: 100%;
 }
 
 /************* GAME NAVIGATION ****************/
@@ -128,6 +128,7 @@ text-align: center;
   color: white;
   text-shadow: .05px .05px gainsboro;
   font-weight: bold;
+  font-size: 15px;
 }
 
 .choice-item:hover {
@@ -142,16 +143,23 @@ text-align: center;
 .choice-item {
   display: flex;
   justify-content: center;
-  margin: 10px 0;
+  margin: 10px auto;
   background: #f4c0d7;
   border-radius: 20px;
   align: right;
+  width: 80%;
 }
 
 .game-question-card {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.question-card-header {
+  max-width: 60%;
 }
 
 .question-card-header h4 {
@@ -173,7 +181,15 @@ text-align: center;
   flex-direction: column;
   margin: 10px auto;
   margin-top: 18px;
-  width: 50%;
+  width: 45%;
+
+}
+
+.game-choices {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .game-choices ul {
@@ -192,10 +208,11 @@ text-align: center;
 .button-div {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
   margin-top: 20px;
   padding-top: 20px;
+  margin-bottom: 40px;
 }
 
 .button-div button {
@@ -223,3 +240,8 @@ button.restart:hover {
 }
 
 /*********************************************/
+
+.game-question-card {
+  display: flex;
+
+}

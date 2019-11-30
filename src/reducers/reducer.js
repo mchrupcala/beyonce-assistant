@@ -631,7 +631,7 @@ export const reducer = (state = initialState, action) => {
                 
                 currentIndex: state.currentIndex + action.payload.clickedOption,
                 
-                score: (state.game[state.currentIndex + action.payload.clickedOption].outcome === "failed" ? 0 : state.score + 100) 
+                score: (state.game[state.currentIndex + action.payload.clickedOption].outcome === "failed" ? state.score : state.score + 100) 
                 
             };
 
@@ -646,6 +646,7 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 currentIndex: 0,
+                score: 0,
                 lastIndex: []
             }
             

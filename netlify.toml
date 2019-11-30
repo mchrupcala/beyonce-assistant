@@ -1,4 +1,0 @@
-[build]
-base = "beyonce-assistant/"
-publish = "beyonce-assistant/build/"
-command = "yarn build"
