@@ -25,6 +25,9 @@ const App = props => {
         <h1>Beyonce's Assistant</h1>
         <GameCard nextQuestion={props.nextQuestion}/>
       </header>
+      <div>Inspired by Landon Rivera's  
+        <a href="https://twitter.com/CORNYASSBITCH/status/1142591156884127744">Twitter game.</a>
+      </div>
     </div>
   );
 }

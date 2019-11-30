@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
 }
 
 /************* BASIC ELEMENT STYLING ****************/
@@ -156,10 +162,11 @@ text-align: center;
   margin-bottom: 5%;
   display: flex;
   align-items: center;
+  /* background: black; */
 }
 
 .question-card-header {
-  max-width: 60%;
+  width: 60%;
 }
 
 .question-card-header h4 {
@@ -180,8 +187,9 @@ text-align: center;
   display: flex;
   flex-direction: column;
   margin: 10px auto;
+  justify-content: center;
   margin-top: 18px;
-  width: 45%;
+  width: 35%;
 
 }
 
@@ -241,7 +249,7 @@ button.restart:hover {
 
 /*********************************************/
 
-.game-question-card {
-  display: flex;
+/* .gamecard, .App-header {
+  background: black;
+} */
 
-}

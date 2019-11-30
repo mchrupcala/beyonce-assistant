@@ -36,7 +36,7 @@ let restartHandler = item => {
 // }
 
     return(
-        <>
+        <div className="gamecard">
         <div className="game-question-card">
             <div className="question-card-header">
             <div className="media-container">
@@ -93,7 +93,7 @@ let restartHandler = item => {
             })
         } }>Restart</button>
         </div>
-        </>
+        </div>
     );
 
 }
