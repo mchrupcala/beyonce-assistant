@@ -10,7 +10,7 @@ const Nav = (props) => {
             </ul>
 
             <div className="gamescore">
-                <h2>Your score: {props.score}</h2>
+                {/* <h2>Your score: {props.score}</h2> */}
             </div>
         </div>
     )

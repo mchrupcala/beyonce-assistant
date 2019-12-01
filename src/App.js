@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-// import Game from './components/Game';
 import GameCard from './GameCard';
-// import Choice from './Choice';
 import {nextQuestion} from './actions';
 import { connect } from 'react-redux';
 import Nav from './components/Nav';
@@ -19,6 +17,8 @@ const App = props => {
     props.nextQuestion(item);
   }
 
+  console.log(clickHandler, "not using this right now");
+
   let bannerHandler = () => {
     setBannerClick(true);
   }
@@ -32,13 +32,14 @@ const App = props => {
           </div>
         </div>
 
-      <Nav score={props.score}/>
+      <Nav/>
       <header className="App-header">
         <h1>Beyonce's Assistant</h1>
+        <div className="score-div"><h3>Your score: {props.score}</h3></div>
         <GameCard nextQuestion={props.nextQuestion}/>
       </header>
       <div>Inspired by Landon Rivera's  
-        <a href="https://twitter.com/CORNYASSBITCH/status/1142591156884127744">Twitter game.</a>
+        <a href="https://twitter.com/CORNYASSBITCH/status/1142591156884127744"> Twitter game.</a>
       </div>
 
 

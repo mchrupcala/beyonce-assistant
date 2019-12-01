@@ -19,10 +19,10 @@ let restartHandler = item => {
 
   
   let choiceLen = Object.keys(props.choices).length;
-  let incVals = Object.values(props.choices).map(item => item[1]);
+//   let incVals = Object.values(props.choices).map(item => item[1]);
 
   // Why do I need this stuff, and the second function call of newLen() on line 60? Might be useless but keep it around to find out.
-  let choiceLoop = []
+//   let choiceLoop = []
 
 //   function NewLen() {
 
@@ -40,7 +40,7 @@ let restartHandler = item => {
         <div className="game-question-card">
             <div className="question-card-header">
             <div className="media-container">
-                {props.mediaType === "img" ? (<img src={props.media}></img>)
+                {props.mediaType === "img" ? (<img src={props.media} alt="Game file."></img>)
                  : (
                     <video autoPlay loop muted playsInline key={props.media}>
                     <source src={props.media} type="video/mp4"></source>

@@ -8,6 +8,8 @@
   width: 100%;
 }
 
+/* original body background color: #282c34  */
+
 /************* BASIC ELEMENT STYLING ****************/
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -49,8 +51,7 @@ button {
 /*********************************************/
 
 body {
-  background-color: #282c34;
-  /* min-height: 100vh; */
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,9 +130,18 @@ text-align: center;
 
 /************* GAME NAVIGATION ****************/
 
+.score-div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.score-div h3 {
+  padding-right: 1%;
+}
+
 .choice-item p {
   width: 90%;
-  color: white;
+  color: black;
   text-shadow: .05px .05px gainsboro;
   font-weight: bold;
   font-size: 15px;
@@ -158,11 +168,10 @@ text-align: center;
 
 .game-question-card {
   width: 90%;
-  margin: 0 auto;
   margin-bottom: 5%;
+  padding: 0 5%;
   display: flex;
-  align-items: center;
-  /* background: black; */
+  justify-content: space-between;
 }
 
 .question-card-header {
@@ -186,11 +195,27 @@ text-align: center;
 .game-choice-menu {
   display: flex;
   flex-direction: column;
-  margin: 10px auto;
-  justify-content: center;
   margin-top: 18px;
   width: 35%;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: #black;
+}
 
+.game-choice-menu h3 {
+  padding: 0 10px;
+  color: #f4c0d7;
+}
+
+.gamecard {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 5% 5%;
+  background: #0a0a0a;
+}
+
+.media-container {
+  margin-top: 5%;
 }
 
 .game-choices {
