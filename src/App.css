@@ -290,11 +290,16 @@ button.restart:hover {
 
 .banner-content {
   margin: 0 auto;
+  padding: 3% 0 5% 0;
+  background: black;
+  width: 100%;
+  border: 3px double pink;
 }
 
 .banner-button {
   width: 150px;
   border-radius: 20px;
+  margin: 0 15px;
 }
 
 .hide-banner {

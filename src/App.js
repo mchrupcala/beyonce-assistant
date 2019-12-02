@@ -27,8 +27,10 @@ const App = props => {
     <div className="App">
         <div className={bannerClick ? 'hide-banner' : "welcome-banner"} >
           <div className="banner-content">
-            <h2>Think you have what it takes to be Bey's assistant for the day?</h2>
-            <button className="banner-button" onClick={bannerHandler}>Yes/No?</button>
+            <h2>Think you have what it takes to be</h2>
+            <h2>Bey's assistant for the day?</h2>
+            <button className="banner-button" onClick={bannerHandler}>Yes!</button>
+            <button className="banner-button">Probs not...</button>
           </div>
         </div>
 
