@@ -40,7 +40,7 @@ let restartHandler = item => {
         <div className="game-question-card">
             <div className="question-card-header">
             <div className="media-container">
-                {props.mediaType === "img" ? (<img src={props.media} alt="Game file."></img>)
+                {props.mediaType === "img" ? (<img src={props.media} alt="Game file"></img>)
                  : (
                     <video autoPlay loop muted playsInline key={props.media}>
                     <source src={props.media} type="video/mp4"></source>
