@@ -78,18 +78,6 @@ text-align: center;
 
 }
 
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  text-align: center;
-}
-.navbar a {
-  text-decoration: none;
-  margin: 0 10px; 
-}
-
-
 .App-link {
   color: #09d3ac;
 }
@@ -106,6 +94,20 @@ text-align: center;
   margin: auto 10px;
   /* margin: 20px 20px; */
 }
+
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  text-align: center;
+}
+.navbar a {
+  text-decoration: none;
+  margin: 0 10px; 
+}
+
+
 
 /************* GAME SCREEN ****************/
 
