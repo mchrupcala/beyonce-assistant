@@ -49,6 +49,9 @@ button {
 }
 
 /*********************************************/
+/*********************************************/
+
+
 
 body {
   background-color: black;
@@ -86,16 +89,9 @@ text-align: center;
   margin: 0 10px; 
 }
 
-.gamescore {
-  /* background: red; */
-}
 
 .App-link {
   color: #09d3ac;
-}
-
-.game-img {
-  /* display: none; */
 }
 
 .active-img {
